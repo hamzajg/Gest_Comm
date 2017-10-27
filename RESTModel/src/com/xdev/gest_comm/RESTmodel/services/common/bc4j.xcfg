@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!---->
+<BC4JConfig xmlns="http://xmlns.oracle.com/bc4j/configuration" version="11.1">
+  <AppModuleConfigBag ApplicationName="com.xdev.gest_comm.RESTmodel.services.AppModule">
+    <AppModuleConfig name="AppModuleLocal" jbo.project="com.xdev.gest_comm.RESTmodel.RESTModel"
+                     ApplicationName="com.xdev.gest_comm.RESTmodel.services.AppModule" DeployPlatform="LOCAL">
+      <Database jbo.TypeMapEntries="Java" jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver"
+                JDBCDataSource="java:comp/env/jdbc/GestCommDBDS" jbo.SQLBuilder="SQL92"/>
+      <Security AppModuleJndiName="com.xdev.gest_comm.RESTmodel.services.AppModule"/>
+    </AppModuleConfig>
+    <AppModuleConfig name="AppModuleShared" jbo.project="com.xdev.gest_comm.RESTmodel.RESTModel"
+                     ApplicationName="com.xdev.gest_comm.RESTmodel.services.AppModule" DeployPlatform="LOCAL">
+      <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+      <Database jbo.TypeMapEntries="Java" jbo.sql92.JdbcDriverClass="com.mysql.jdbc.Driver"
+                JDBCDataSource="java:comp/env/jdbc/GestCommDBDS" jbo.SQLBuilder="SQL92"/>
+      <Security AppModuleJndiName="com.xdev.gest_comm.RESTmodel.services.AppModule"/>
+    </AppModuleConfig>
+  </AppModuleConfigBag>
+</BC4JConfig>

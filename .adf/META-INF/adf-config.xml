@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adf-config xmlns="http://xmlns.oracle.com/adf/config" xmlns:adf="http://xmlns.oracle.com/adf/config/properties"
-            xmlns:config="http://xmlns.oracle.com/bc4j/configuration">
+            xmlns:config="http://xmlns.oracle.com/bc4j/configuration"
+            xmlns:sec="http://xmlns.oracle.com/adf/security/config">
   <adf:adf-properties-child xmlns="http://xmlns.oracle.com/adf/config/properties">
     <adf-property name="adfAppUID" value="Gest_Comm.com.xdev.gest_comm"/>
   </adf:adf-properties-child>
@@ -16,4 +17,8 @@
       <version name="v1" displayName="v1"/>
     </versions>
   </adf-adfm-config>
+  <sec:adf-security-child xmlns="http://xmlns.oracle.com/adf/security/config">
+    <CredentialStoreContext credentialStoreClass="oracle.adf.share.security.providers.jps.CSFCredentialStore"
+                            credentialStoreLocation="../../src/META-INF/jps-config.xml"/>
+  </sec:adf-security-child>
 </adf-config>

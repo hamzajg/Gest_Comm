@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Article"
+  Version="12.2.1.16.48"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="article"
+  AliasName="Article"
+  BindingStyle="JDBC">
+  <Attribute
+    Name="IdArticle"
+    IsUpdateable="while_insert"
+    IsNotNull="true"
+    ColumnName="id_article"
+    SQLType="NUMERIC"
+    Type="java.lang.Long"
+    ColumnType="BIGINT"
+    TableName="article"
+    PrimaryKey="true"/>
+  <Key
+    Name="ArticleIdArticleCheck">
+    <DesignTime>
+      <Attr Name="_isNotNull" Value="true"/>
+      <Attr Name="_checkCondition" Value='"id_article" IS NOT NULL'/>
+      <Attr Name="_isCheck" Value="true"/>
+      <Attr Name="_DBObjectName" Value="ARTICLE_ID_ARTICLE_CHECK"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.xdev.gest_comm.RESTmodel.entities.Article.IdArticle"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="ArticlePrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="ARTICLE_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.xdev.gest_comm.RESTmodel.entities.Article.IdArticle"/>
+    </AttrArray>
+  </Key>
+</Entity>
